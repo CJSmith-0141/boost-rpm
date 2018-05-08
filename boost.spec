@@ -34,9 +34,9 @@
 
 Name: boost
 Summary: The free peer-reviewed portable C++ source libraries
-Version: 1.54.0
-%define version_enc 1_54_0
-Release: 14%{?dist}
+Version: 1.65.1
+%define version_enc 1_65_1
+Release: 1
 License: Boost and MIT and Python
 
 %define toplev_dirname %{name}_%{version_enc}
@@ -90,113 +90,113 @@ BuildRequires: python3-devel%{?_isa}
 BuildRequires: libicu-devel%{?_isa}
 
 # https://svn.boost.org/trac/boost/ticket/6150
-Patch4: boost-1.50.0-fix-non-utf8-files.patch
+#Patch4: boost-1.50.0-fix-non-utf8-files.patch
 
 # Add a manual page for bjam, based on the on-line documentation:
 # http://www.boost.org/boost-build2/doc/html/bbv2/overview.html
-Patch5: boost-1.48.0-add-bjam-man-page.patch
+#Patch5: boost-1.48.0-add-bjam-man-page.patch
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=781859
 # The following tickets have yet to be fixed by upstream.
 # https://svn.boost.org/trac/boost/ticket/6413
 # https://svn.boost.org/trac/boost/ticket/8849
-Patch9: boost-1.53.0-attribute.patch
+#Patch9: boost-1.53.0-attribute.patch
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=828856
 # https://bugzilla.redhat.com/show_bug.cgi?id=828857
-Patch15: boost-1.50.0-pool.patch
+#Patch15: boost-1.50.0-pool.patch
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=977098
 # https://svn.boost.org/trac/boost/ticket/8731
-Patch18: boost-1.54.0-__GLIBC_HAVE_LONG_LONG.patch
+#Patch18: boost-1.54.0-__GLIBC_HAVE_LONG_LONG.patch
 
 # Upstream patches posted as release notes:
 # http://www.boost.org/users/history/version_1_54_0.html
-Patch19: 001-coroutine.patch
-Patch20: 002-date-time.patch
-Patch21: 003-log.patch
+#Patch19: 001-coroutine.patch
+#Patch20: 002-date-time.patch
+#Patch21: 003-log.patch
 
 # https://svn.boost.org/trac/boost/ticket/8826
-Patch22: boost-1.54.0-context-execstack.patch
+#Patch22: boost-1.54.0-context-execstack.patch
 
 # https://svn.boost.org/trac/boost/ticket/8844
-Patch23: boost-1.54.0-bind-static_assert.patch
+#Patch23: boost-1.54.0-bind-static_assert.patch
 
 # https://svn.boost.org/trac/boost/ticket/8847
-Patch24: boost-1.54.0-concept-unused_typedef.patch
+#Patch24: boost-1.54.0-concept-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/5637
-Patch25: boost-1.54.0-mpl-print.patch
+#Patch25: boost-1.54.0-mpl-print.patch
 
 # https://svn.boost.org/trac/boost/ticket/8859
-Patch26: boost-1.54.0-static_warning-unused_typedef.patch
+#Patch26: boost-1.54.0-static_warning-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8855
-Patch27: boost-1.54.0-math-unused_typedef.patch
-Patch28: boost-1.54.0-math-unused_typedef-2.patch
+#Patch27: boost-1.54.0-math-unused_typedef.patch
+#Patch28: boost-1.54.0-math-unused_typedef-2.patch
 
 # https://svn.boost.org/trac/boost/ticket/8853
-Patch31: boost-1.54.0-tuple-unused_typedef.patch
+#Patch31: boost-1.54.0-tuple-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8854
-Patch32: boost-1.54.0-random-unused_typedef.patch
+#Patch32: boost-1.54.0-random-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8856
-Patch33: boost-1.54.0-date_time-unused_typedef.patch
-Patch34: boost-1.54.0-date_time-unused_typedef-2.patch
+#Patch33: boost-1.54.0-date_time-unused_typedef.patch
+#Patch34: boost-1.54.0-date_time-unused_typedef-2.patch
 
 # https://svn.boost.org/trac/boost/ticket/8870
-Patch35: boost-1.54.0-spirit-unused_typedef.patch
-Patch36: boost-1.54.0-spirit-unused_typedef-2.patch
+#Patch35: boost-1.54.0-spirit-unused_typedef.patch
+#Patch36: boost-1.54.0-spirit-unused_typedef-2.patch
 
 # https://svn.boost.org/trac/boost/ticket/8871
-Patch37: boost-1.54.0-numeric-unused_typedef.patch
+#Patch37: boost-1.54.0-numeric-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8872
-Patch38: boost-1.54.0-multiprecision-unused_typedef.patch
+#Patch38: boost-1.54.0-multiprecision-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8874
-Patch42: boost-1.54.0-unordered-unused_typedef.patch
+#Patch42: boost-1.54.0-unordered-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8876
-Patch43: boost-1.54.0-algorithm-unused_typedef.patch
+#Patch43: boost-1.54.0-algorithm-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8877
-Patch44: boost-1.54.0-graph-unused_typedef.patch
+#Patch44: boost-1.54.0-graph-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8878
-Patch45: boost-1.54.0-locale-unused_typedef.patch
+#Patch45: boost-1.54.0-locale-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8879
-Patch46: boost-1.54.0-property_tree-unused_typedef.patch
+#Patch46: boost-1.54.0-property_tree-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8880
-Patch47: boost-1.54.0-xpressive-unused_typedef.patch
+#Patch47: boost-1.54.0-xpressive-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8881
-Patch48: boost-1.54.0-mpi-unused_typedef.patch
+#Patch48: boost-1.54.0-mpi-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8888
-Patch49: boost-1.54.0-python-unused_typedef.patch
+#Patch49: boost-1.54.0-python-unused_typedef.patch
 
 # https://svn.boost.org/trac/boost/ticket/8941
-Patch50: boost-1.54.0-lexical_cast-int128.patch
+#Patch50: boost-1.54.0-lexical_cast-int128.patch
 
 # https://svn.boost.org/trac/boost/ticket/9038
-Patch51: boost-1.54.0-pool-test_linking.patch
+#Patch51: boost-1.54.0-pool-test_linking.patch
 
 # https://svn.boost.org/trac/boost/ticket/9037
-Patch52: boost-1.54.0-thread-cond_variable_shadow.patch
+#Patch52: boost-1.54.0-thread-cond_variable_shadow.patch
 
 # This was already fixed upstream, so no tracking bug.
-Patch53: boost-1.54.0-pool-max_chunks_shadow.patch
+#Patch53: boost-1.54.0-pool-max_chunks_shadow.patch
 
 # https://svn.boost.org/trac/boost/ticket/9041
-Patch54: boost-1.54.0-thread-link_atomic.patch
+#Patch54: boost-1.54.0-thread-link_atomic.patch
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1002578
 # https://svn.boost.org/trac/boost/ticket/9065
-Patch55: boost-1.54.0-interprocess-atomic_cas32-ppc.patch
+#Patch55: boost-1.54.0-interprocess-atomic_cas32-ppc.patch
 
 %bcond_with tests
 %bcond_with docs_generated
@@ -323,43 +323,43 @@ Run-Time support of boost program options library, which allows program
 developers to obtain (name, value) pairs from the user, via
 conventional methods such as command line and configuration file.
 
-%package python
-Summary: Run-Time component of boost python library
-Group: System Environment/Libraries
+#%package python
+#Summary: Run-Time component of boost python library
+#Group: System Environment/Libraries
 
-%description python
+#%description python
 
-The Boost Python Library is a framework for interfacing Python and
-C++. It allows you to quickly and seamlessly expose C++ classes
-functions and objects to Python, and vice versa, using no special
-tools -- just your C++ compiler.  This package contains run-time
-support for Boost Python Library.
+#The Boost Python Library is a framework for interfacing Python and
+#C++. It allows you to quickly and seamlessly expose C++ classes
+#functions and objects to Python, and vice versa, using no special
+#tools -- just your C++ compiler.  This package contains run-time
+#support for Boost Python Library.
 
-%if %{with python3}
+#%if %{with python3}
 
-%package python3
-Summary: Run-Time component of boost python library for Python 3
-Group: System Environment/Libraries
+#%package python3
+#Summary: Run-Time component of boost python library for Python 3
+#Group: System Environment/Libraries
 
-%description python3
+#%description python3
 
-The Boost Python Library is a framework for interfacing Python and
-C++. It allows you to quickly and seamlessly expose C++ classes
-functions and objects to Python, and vice versa, using no special
-tools -- just your C++ compiler.  This package contains run-time
-support for Boost Python Library compiled for Python 3.
+#The Boost Python Library is a framework for interfacing Python and
+#C++. It allows you to quickly and seamlessly expose C++ classes
+#functions and objects to Python, and vice versa, using no special
+#tools -- just your C++ compiler.  This package contains run-time
+#support for Boost Python Library compiled for Python 3.
 
-%package python3-devel
-Summary: Shared object symbolic links for Boost.Python 3
-Group: System Environment/Libraries
-Requires: boost-python3 = %{version}-%{release}
-Requires: boost-devel = %{version}-%{release}
+#%package python3-devel
+#Summary: Shared object symbolic links for Boost.Python 3
+#Group: System Environment/Libraries
+#Requires: boost-python3 = %{version}-%{release}
+#Requires: boost-devel = %{version}-%{release}
 
-%description python3-devel
+#%description python3-devel
 
-Shared object symbolic links for Python 3 variant of Boost.Python.
+#Shared object symbolic links for Python 3 variant of Boost.Python.
 
-%endif
+#%endif
 
 %package random
 Summary: Run-Time component of boost random library
@@ -455,7 +455,7 @@ pre-processor functionality.
 Summary: The Boost C++ headers and shared development libraries
 Group: Development/Libraries
 Requires: boost = %{version}-%{release}
-Provides: boost-python-devel = %{version}-%{release}
+#Provides: boost-python-devel = %{version}-%{release}
 Requires: libicu-devel%{?_isa}
 
 # Odeint was shipped in Fedora 18, but later became part of Boost.
@@ -485,7 +485,7 @@ Group: Documentation
 %if 0%{?fedora} >= 10 || 0%{?rhel} >= 6
 BuildArch: noarch
 %endif
-Provides: boost-python-docs = %{version}-%{release}
+#Provides: boost-python-docs = %{version}-%{release}
 
 # See the description above.
 Provides: odeint-doc = 2.2-5
@@ -651,43 +651,43 @@ a number of significant features and is now developed independently
 %prep
 %setup -q -n %{toplev_dirname}
 
-%patch4 -p1
-%patch5 -p1
-%patch9 -p1
-%patch15 -p0
-%patch18 -p1
-%patch19 -p1
-%patch20 -p1
-%patch21 -p1
-%patch22 -p1
-%patch23 -p1
-%patch24 -p1
-%patch25 -p0
-%patch26 -p1
-%patch27 -p1
-%patch28 -p0
-%patch31 -p0
-%patch32 -p0
-%patch33 -p0
-%patch34 -p1
-%patch35 -p1
-%patch36 -p1
-%patch37 -p1
-%patch38 -p1
-%patch42 -p1
-%patch43 -p1
-%patch44 -p1
-%patch45 -p1
-%patch46 -p1
-%patch47 -p1
-%patch48 -p1
-%patch49 -p1
-%patch50 -p0
-%patch51 -p1
-%patch52 -p1
-%patch53 -p1
-%patch54 -p1
-%patch55 -p1
+#%patch4 -p1
+#%patch5 -p1
+#%patch9 -p1
+#%patch15 -p0
+#%patch18 -p1
+#%patch19 -p1
+#%patch20 -p1
+#%patch21 -p1
+#%patch22 -p1
+#%patch23 -p1
+#%patch24 -p1
+#%patch25 -p0
+#%patch26 -p1
+#%patch27 -p1
+#%patch28 -p0
+#%patch31 -p0
+#%patch32 -p0
+#%patch33 -p0
+#%patch34 -p1
+#%patch35 -p1
+#%patch36 -p1
+#%patch37 -p1
+#%patch38 -p1
+#%patch42 -p1
+#%patch43 -p1
+#%patch44 -p1
+#%patch45 -p1
+#%patch46 -p1
+#%patch47 -p1
+#%patch48 -p1
+#%patch49 -p1
+#%patch50 -p0
+#%patch51 -p1
+#%patch52 -p1
+#%patch53 -p1
+#%patch54 -p1
+#%patch55 -p1
 
 # At least python2_version needs to be a macro so that it's visible in
 # %%install as well.
@@ -716,7 +716,7 @@ using python : %{python3_version} : /usr/bin/python3 : /usr/include/python%{pyth
 %endif
 EOF
 
-./bootstrap.sh --with-toolset=gcc --with-icu
+./bootstrap.sh --with-toolset=gcc --with-icu --without-libraries=python
 
 # N.B. When we build the following with PCH, parts of boost (math
 # library in particular) end up being built second time during
@@ -987,9 +987,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %postun program-options -p /sbin/ldconfig
 
-%post python -p /sbin/ldconfig
+#%post python -p /sbin/ldconfig
 
-%postun python -p /sbin/ldconfig
+#%postun python -p /sbin/ldconfig
 
 %post random -p /sbin/ldconfig
 
@@ -1102,22 +1102,22 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE_1_0.txt
 %{_libdir}/libboost_program_options.so.%{sonamever}
 
-%files python
-%defattr(-, root, root, -)
-%doc LICENSE_1_0.txt
-%{_libdir}/libboost_python.so.%{sonamever}
+#%files python
+#%defattr(-, root, root, -)
+#%doc LICENSE_1_0.txt
+#%{_libdir}/libboost_python.so.%{sonamever}
 
-%if %{with python3}
-%files python3
-%defattr(-, root, root, -)
-%doc LICENSE_1_0.txt
-%{_libdir}/libboost_python3.so.%{sonamever}
+#%if %{with python3}
+#%files python3
+#%defattr(-, root, root, -)
+#%doc LICENSE_1_0.txt
+#%{_libdir}/libboost_python3.so.%{sonamever}
 
-%files python3-devel
-%defattr(-, root, root, -)
-%doc LICENSE_1_0.txt
-%{_libdir}/libboost_python3.so
-%endif
+#%files python3-devel
+#%defattr(-, root, root, -)
+#%doc LICENSE_1_0.txt
+#%{_libdir}/libboost_python3.so
+#%endif
 
 %files random
 %defattr(-, root, root, -)
@@ -1193,7 +1193,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libboost_prg_exec_monitor.so
 %{_libdir}/libboost_unit_test_framework.so
 %{_libdir}/libboost_program_options.so
-%{_libdir}/libboost_python.so
+#%{_libdir}/libboost_python.so
 %{_libdir}/libboost_random.so
 %{_libdir}/libboost_regex.so
 %{_libdir}/libboost_serialization.so
